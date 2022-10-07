@@ -8,23 +8,24 @@ Javascript Tutorial by Ifeanyi Omeata
 ### [1-INTRO TO APIS](#)
 
 <details>
-  <summary>1. Install pygments</summary>
-
-components/Card.js:
+  <summary>1. How to use fetch with json</summary>
 
 ```Javascript
-
-
+fetch('http://example.com/movies.json')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
 
 ```Javascript
+var myRequest = new Request('products.json');//GET
+var myRequest = new Request('products.json', {method: "post"});//POST
 
-
-```
-
-```Javascript
-
-
+fetch(myRequest)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(console.error);
 ```
 
 </details>
