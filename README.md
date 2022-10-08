@@ -145,23 +145,17 @@ fetch("https://apis.scrimba.com/jsonplaceholder/todos", {method: "GET"})
 </details>
 
 <details>
-  <summary>6. Install pygments</summary>
+  <summary>6. Get first 5 blog Posts</summary>
 
-components/Card.js:
-
-```Javascript
-
-
-```
+index.js:
 
 ```Javascript
-
-
-```
-
-```Javascript
-
-
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+    .then(res => res.json())
+    .then(data => {
+        const postsArr = data.slice(0, 5)
+        console.log(postsArr)
+    })
 ```
 
 </details>
