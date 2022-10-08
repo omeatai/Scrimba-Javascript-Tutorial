@@ -142,16 +142,6 @@ fetch("https://apis.scrimba.com/jsonplaceholder/todos", {method: "GET"})
     .then(data => console.log(data))
 ```
 
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
 </details>
 
 <details>
