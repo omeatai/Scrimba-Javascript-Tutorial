@@ -8,7 +8,7 @@ Javascript Tutorial by Ifeanyi Omeata
 ### [1-INTRO TO APIS](#)
 
 <details>
-  <summary>1. How to use fetch with json</summary>
+  <summary>1. How to use Fetch with json</summary>
 
 ```Javascript
 fetch('http://example.com/movies.json')
@@ -31,13 +31,19 @@ fetch(myRequest)
 </details>
 
 <details>
-  <summary>2. Install pygments</summary>
+  <summary>2. Dog API Fetch</summary>
 
-components/Card.js:
+index.js:
 
 ```Javascript
-
-
+fetch("https://dog.ceo/api/breeds/image/random")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        document.getElementById("image-container").innerHTML = `
+            <img src="${data.message}" />
+        `
+    })
 ```
 
 ```Javascript
