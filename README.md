@@ -31,7 +31,7 @@ fetch(myRequest)
 </details>
 
 <details>
-  <summary>2. Dog API Fetch</summary>
+  <summary>2. API Fetch</summary>
 
 index.js:
 
@@ -47,8 +47,12 @@ fetch("https://dog.ceo/api/breeds/image/random")
 ```
 
 ```Javascript
-
-
+fetch("https://apis.scrimba.com/bored/api/activity")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        document.getElementById("activity-name").textContent = data.activity
+    })
 ```
 
 ```Javascript
