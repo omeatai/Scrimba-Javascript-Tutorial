@@ -132,13 +132,14 @@ button {
 ### [2-URLs & REST](#)
 
 <details>
-  <summary>5. Install pygments</summary>
+  <summary>5. GET Method</summary>
 
-components/Card.js:
+index.js:
 
 ```Javascript
-
-
+fetch("https://apis.scrimba.com/jsonplaceholder/todos", {method: "GET"})
+    .then(res => res.json())
+    .then(data => console.log(data))
 ```
 
 ```Javascript
