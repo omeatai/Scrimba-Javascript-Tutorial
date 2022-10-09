@@ -260,22 +260,97 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 </details>
 
 <details>
-  <summary>9. Install pygments</summary>
+  <summary>9. BlogSpace - Adding Style to Form</summary>
 
-components/Card.js:
+index.css:
 
-```Javascript
+```css
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+nav {
+    background-color: beige;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav > h3 {
+    margin: 0;
+}
+
+#blog-list {
+    padding: 10px;
+}
+
+form {
+    padding: 60px 10px 10px;
+    display: grid;
+    background-color: lightblue;
+}
+
+input#post-title, textarea#post-body {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
 
 ```
 
-```Javascript
+index.html:
 
+```html
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav>
+            <h3>BlogSpace</h3>
+        </nav>
+        <form>
+            <label for="post-title">Title:</label>
+            <input id="post-title" type="text" />
+            <label for="post-body">Body:</label>
+            <textarea id="post-body"></textarea>
+            <button>Post</button>
+        </form>
+        <div id="blog-list"></div>
+        <script src="index.js"></script>
+    </body>
+</html>
 
 ```
 
-```Javascript
+Index.js:
 
+```Javascript
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+    .then(res => res.json())
+    .then(data => {
+        const postsArr = data.slice(0, 5)
+        let html = ""
+        for (let post of postsArr) {
+            html += `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+            `
+        }
+        document.getElementById("blog-list").innerHTML = html
+    })
 
 ```
 
