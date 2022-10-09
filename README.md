@@ -161,22 +161,25 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 </details>
 
 <details>
-  <summary>7. Install pygments</summary>
+  <summary>7. Display Blogs on Page</summary>
 
-components/Card.js:
-
-```Javascript
-
-
-```
+index.js:
 
 ```Javascript
-
-
-```
-
-```Javascript
-
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+    .then(res => res.json())
+    .then(data => {
+        const postsArr = data.slice(0, 5)
+        let html = ""
+        for (let post of postsArr) {
+            html += `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+            `
+        }
+        document.getElementById("blog-list").innerHTML = html
+    })
 
 ```
 
