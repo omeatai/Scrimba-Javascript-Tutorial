@@ -186,22 +186,74 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 </details>
 
 <details>
-  <summary>8. Install pygments</summary>
+  <summary>8. BlogSpace - Adding Navbar</summary>
 
-components/Card.js:
+index.html:
 
-```Javascript
-
+```html
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav>
+            <h3>BlogSpace</h3>
+        </nav>
+        <div id="blog-list"></div>
+        <script src="index.js"></script>
+    </body>
+</html>
 
 ```
 
-```Javascript
+Index.css:
 
+```css
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: beige;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav > h3 {
+    margin: 0;
+}
+
+#blog-list {
+    padding: 30px 10px 10px;
+}
 
 ```
 
-```Javascript
+Index.js:
 
+```Javascript
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+    .then(res => res.json())
+    .then(data => {
+        const postsArr = data.slice(0, 5)
+        let html = ""
+        for (let post of postsArr) {
+            html += `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+            `
+        }
+        document.getElementById("blog-list").innerHTML = html
+    })
 
 ```
 
