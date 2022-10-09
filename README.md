@@ -357,7 +357,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 </details>
 
 <details>
-  <summary>10. Form prevent Default</summary>
+  <summary>10. BlogSpace - Form prevent Default</summary>
 
 Index.js:
 
