@@ -393,22 +393,20 @@ document.getElementById("new-post").addEventListener("submit", function(e) {
 </details>
 
 <details>
-  <summary>11. Install pygments</summary>
+  <summary>11. Requests - Body</summary>
 
 Index.js:
 
 ```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
+fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
+    method: "POST",
+    body: JSON.stringify({
+        title: "Buy Milk",
+        completed: false
+    })
+})
+    .then(res => res.json())
+    .then(data => console.log(data))
 
 ```
 
