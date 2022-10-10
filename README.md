@@ -398,19 +398,6 @@ document.getElementById("new-post").addEventListener("submit", function(e) {
 Index.js:
 
 ```Javascript
-fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
-    method: "POST",
-    body: JSON.stringify({
-        title: "Buy Milk",
-        completed: false
-    })
-})
-    .then(res => res.json())
-    .then(data => console.log(data))
-
-```
-
-```Javascript
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
