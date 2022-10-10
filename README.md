@@ -588,22 +588,19 @@ form.addEventListener("submit", function(e) {
 </details>
 
 <details>
-  <summary>14. Install pygments</summary>
+  <summary>14. URL Query Strings</summary>
 
-Index.js:
+```markdown
+1. Get a list of all bike racks sold on the site?
+/bikeracks
 
-```Javascript
+2. Get a list of all bike racks available in the physical store right now?
+   (Assume a query called "available" that is a boolean true/false)
+/bikeracks?available=true  ==> {available: "true"} (Will be parsed as a string)
 
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
+3. Get a list of all "Thule"-brand bike racks that can hold 4 bikes?
+   (Assume there are "brand" and "numBikes" queries)
+/bikeracks?brand=thule&numBikes=4
 
 ```
 
