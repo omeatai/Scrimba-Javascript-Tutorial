@@ -623,35 +623,19 @@ function handleClick() {
 document.getElementById("new-deck").addEventListener("click", handleClick)
 ```
 
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
 </details>
 
 <details>
-  <summary>16. Install pygments</summary>
+  <summary>16. Callback with setTimeout</summary>
 
 Index.js:
 
 ```Javascript
+function callback() {
+    console.log("I finally ran!")
+}
 
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
+setTimeout(callback, 2000)
 
 ```
 
