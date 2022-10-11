@@ -609,13 +609,18 @@ form.addEventListener("submit", function(e) {
 ### [3-ASYNC JAVASCRIPT](#)
 
 <details>
-  <summary>15. Install pygments</summary>
+  <summary>15. Callback Function</summary>
 
 Index.js:
 
 ```Javascript
+function handleClick() {
+    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
 
-
+document.getElementById("new-deck").addEventListener("click", handleClick)
 ```
 
 ```Javascript
