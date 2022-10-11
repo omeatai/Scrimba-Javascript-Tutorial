@@ -715,17 +715,20 @@ console.log(peopleWithPets)
 </details>
 
 <details>
-  <summary>18. Install pygments</summary>
+  <summary>18. Method chaining with Filter and Map</summary>
 
 Index.js:
 
 ```Javascript
+const voters = [
+    {name: "Joe", email: "joe@joe.com", voted: true},
+    {name: "Jane", email: "jane@jane.com", voted: true},
+    {name: "Bo", email: "bo@bo.com", voted: false},
+    {name: "Bane", email: "bane@bane.com", voted: false}
+]
 
-
-```
-
-```Javascript
-
+const finalResult = voters.filter(voter => voter.voted).map(voter => voter.email)
+console.log(finalResult)
 
 ```
 
