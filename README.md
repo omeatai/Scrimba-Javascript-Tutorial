@@ -642,22 +642,38 @@ setTimeout(callback, 2000)
 </details>
 
 <details>
-  <summary>17. Install pygments</summary>
+  <summary>17. Callback with Filter</summary>
 
 Index.js:
 
 ```Javascript
+const people = [
+    { name: "Jack", hasPet: true, age: 12 },
+    { name: "Jill", hasPet: false, age: 18 },
+    { name: "Alice", hasPet: true, age: 22 },
+    { name: "Bob", hasPet: false, age: 32 },
+]
 
+function gimmeThePets(person) {
+    return person.hasPet
+}
+
+const peopleWithPets = people.filter(gimmeThePets)
+console.log(peopleWithPets)
 
 ```
 
 ```Javascript
+const people = [
+    { name: "Jack", hasPet: true, age: 12 },
+    { name: "Jill", hasPet: false, age: 18 },
+    { name: "Alice", hasPet: true, age: 22 },
+    { name: "Bob", hasPet: false, age: 32 },
+]
 
+const adults = people.filter(person => person.age >= 18)
 
-```
-
-```Javascript
-
+console.log(adults)
 
 ```
 
