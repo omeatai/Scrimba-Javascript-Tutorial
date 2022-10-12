@@ -735,12 +735,22 @@ console.log(finalResult)
 </details>
 
 <details>
-  <summary>19. Install pygments</summary>
+  <summary>19. Promises - passing basic values</summary>
 
 Index.js:
 
 ```Javascript
-
+fetch("https://apis.scrimba.com/bored/api/activity")
+    .then(function(res) {
+        return "Hello"
+    })
+    .then(function(whatever) {
+        console.log(whatever)
+        return "World"
+    })
+    .then(function(another) {
+        console.log(another)
+    })
 
 ```
 
