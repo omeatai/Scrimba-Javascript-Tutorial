@@ -821,22 +821,70 @@ document.getElementById("draw-cards").addEventListener("click", () => {
 </details>
 
 <details>
-  <summary>22. Install pygments</summary>
+  <summary>22. War - Styling</summary>
+
+Index.css:
+
+```css
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/table.png");
+    font-family: "Exo 2", sans-serif;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #FFF100;
+    cursor: pointer;
+    border: none;
+}
+
+button#new-deck {
+    align-self: flex-start;
+    padding: 5px;
+}
+
+button.draw {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+```
 
 Index.js:
 
 ```Javascript
+let deckId
 
+function handleClick() {
+    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            deckId = data.deck_id
+        })
+}
 
-```
+document.getElementById("new-deck").addEventListener("click", handleClick)
 
-```Javascript
-
-
-```
-
-```Javascript
-
+document.getElementById("draw-cards").addEventListener("click", () => {
+    fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.cards)
+            document.getElementById("cards").innerHTML = `
+                <img src=${data.cards[0].image} />
+                <img src=${data.cards[1].image} />
+            `
+        })
+})
 
 ```
 
