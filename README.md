@@ -837,6 +837,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -854,6 +855,18 @@ button#new-deck {
 button.draw {
     font-size: 1.2em;
     padding: 5px;
+    align-self: stretch;
+}
+
+div.card-slot {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 120px;
+    width: calc(120px * 5 / 7);
+}
+
+div.card-slot:nth-of-type(1) {
+    margin-bottom: 50px;
 }
 
 ```
@@ -880,11 +893,33 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         .then(data => {
             console.log(data.cards)
             document.getElementById("cards").innerHTML = `
-                <img src=${data.cards[0].image} />
-                <img src=${data.cards[1].image} />
+                <img src=${data.cards[0].image} class="card" />
+                <img src=${data.cards[1].image} class="card" />
             `
         })
 })
+
+```
+
+Index.html:
+
+```html
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <button id="new-deck">New Deck</button>
+        <div id="cards">
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+        </div>
+        <button id="draw-cards" class="draw">Draw</button>
+        <script src="index.js"></script>
+    </body>
+</html>
 
 ```
 
@@ -894,11 +929,6 @@ document.getElementById("draw-cards").addEventListener("click", () => {
   <summary>23. Install pygments</summary>
 
 Index.js:
-
-```Javascript
-
-
-```
 
 ```Javascript
 
