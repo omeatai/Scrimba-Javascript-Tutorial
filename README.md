@@ -823,6 +823,28 @@ document.getElementById("draw-cards").addEventListener("click", () => {
 <details>
   <summary>22. War - Styling</summary>
 
+Index.html:
+
+```html
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <button id="new-deck">New Deck</button>
+        <div id="cards">
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+        </div>
+        <button id="draw-cards" class="draw">Draw</button>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+```
+
 Index.css:
 
 ```css
@@ -869,57 +891,42 @@ div.card-slot:nth-of-type(1) {
     margin-bottom: 50px;
 }
 
+img.card {
+    width: 100%;
+    height: 100%;
+}
 ```
 
 Index.js:
 
 ```Javascript
 let deckId
+const cardsContainer = document.getElementById("cards")
+const newDeckBtn = document.getElementById("new-deck")
+const drawCardBtn = document.getElementById("draw-cards")
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             deckId = data.deck_id
         })
 }
 
-document.getElementById("new-deck").addEventListener("click", handleClick)
+newDeckBtn.addEventListener("click", handleClick)
 
-document.getElementById("draw-cards").addEventListener("click", () => {
+drawCardBtn.addEventListener("click", () => {
     fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.cards)
-            document.getElementById("cards").innerHTML = `
+            cardsContainer.children[0].innerHTML = `
                 <img src=${data.cards[0].image} class="card" />
+            `
+            cardsContainer.children[1].innerHTML = `
                 <img src=${data.cards[1].image} class="card" />
             `
         })
 })
-
-```
-
-Index.html:
-
-```html
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <button id="new-deck">New Deck</button>
-        <div id="cards">
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-        </div>
-        <button id="draw-cards" class="draw">Draw</button>
-        <script src="index.js"></script>
-    </body>
-</html>
 
 ```
 
