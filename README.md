@@ -1115,22 +1115,160 @@ div.top > p {
 </details>
 
 <details>
-  <summary>25. Install pygments</summary>
+  <summary>25. Disable the Draw button</summary>
+
+Index.js:
+
+```html
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="top">
+            <button id="new-deck">New Deck</button>
+            <p id="remaining"></p>
+        </div>
+        <h2 id="header">Game of War</h2>
+        <div id="cards">
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+        </div>
+        <button id="draw-cards" class="draw">Draw</button>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+```
 
 Index.js:
 
 ```Javascript
+let deckId
+const cardsContainer = document.getElementById("cards")
+const newDeckBtn = document.getElementById("new-deck")
+const drawCardBtn = document.getElementById("draw-cards")
+const header = document.getElementById("header")
+const remainingText = document.getElementById("remaining")
 
+function handleClick() {
+    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+        .then(res => res.json())
+        .then(data => {
+            remainingText.textContent = `Remaining cards: ${data.remaining}`
+            deckId = data.deck_id
+            console.log(deckId)
+        })
+}
+
+newDeckBtn.addEventListener("click", handleClick)
+
+drawCardBtn.addEventListener("click", () => {
+    fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+        .then(res => res.json())
+        .then(data => {
+            remainingText.textContent = `Remaining cards: ${data.remaining}`
+            cardsContainer.children[0].innerHTML = `
+                <img src=${data.cards[0].image} class="card" />
+            `
+            cardsContainer.children[1].innerHTML = `
+                <img src=${data.cards[1].image} class="card" />
+            `
+            const winnerText = determineCardWinner(data.cards[0], data.cards[1])
+            header.textContent = winnerText
+
+            if (data.remaining === 0) {
+                drawCardBtn.disabled = true
+            }
+        })
+})
+
+function determineCardWinner(card1, card2) {
+    const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9",
+    "10", "JACK", "QUEEN", "KING", "ACE"]
+    const card1ValueIndex = valueOptions.indexOf(card1.value)
+    const card2ValueIndex = valueOptions.indexOf(card2.value)
+
+    if (card1ValueIndex > card2ValueIndex) {
+        return "Card 1 wins!"
+    } else if (card1ValueIndex < card2ValueIndex) {
+        return "Card 2 wins!"
+    } else {
+        return "War!"
+    }
+}
 
 ```
 
-```Javascript
+Index.css:
 
+```css
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/table.png");
+    font-family: "Exo 2", sans-serif;
+    height: 100vh;
+}
 
-```
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
 
-```Javascript
+button {
+    background-color: #FFF100;
+    cursor: pointer;
+    border: none;
+}
 
+button#new-deck {
+    align-self: flex-start;
+    padding: 5px;
+}
+
+button.draw {
+    font-size: 1.2em;
+    padding: 5px;
+    align-self: stretch;
+}
+
+div.card-slot {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 120px;
+    width: calc(120px * 5 / 7);
+}
+
+div.card-slot:nth-of-type(1) {
+    margin-bottom: 50px;
+}
+
+img.card {
+    width: 100%;
+    height: 100%;
+}
+
+div.top {
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+div.top > p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background: #dddddd;
+}
 
 ```
 
