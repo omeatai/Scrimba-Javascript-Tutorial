@@ -1534,6 +1534,8 @@ function determineCardWinner(card1, card2) {
 
 </details>
 
+### [4-PROMISE REJECTION](#)
+
 <details>
   <summary>30. Install pygments</summary>
 
