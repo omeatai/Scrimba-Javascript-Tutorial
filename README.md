@@ -1585,16 +1585,6 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
 ```
 
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
 </details>
 
 <details>
