@@ -1537,22 +1537,34 @@ function determineCardWinner(card1, card2) {
 ### [4-PROMISE REJECTION](#)
 
 <details>
-  <summary>30. Install pygments</summary>
+  <summary>30. Get Photo from Unsplash for background</summary>
 
 Index.js:
 
 ```Javascript
-
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
+    .then(res => res.json())
+    .then(data => {
+        document.body.style.backgroundImage = `url(${data.urls.full})`
+    })
 
 ```
 
-```Javascript
+Index.css:
 
+```css
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
-```
-
-```Javascript
-
+body {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 ```
 
