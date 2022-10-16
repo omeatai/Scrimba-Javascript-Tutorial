@@ -1588,22 +1588,76 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 </details>
 
 <details>
-  <summary>32. Install pygments</summary>
+  <summary>32. Setup Layout</summary>
 
 Index.js:
 
 ```Javascript
-
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
+    .then(res => res.json())
+    .then(data => {
+        document.body.style.backgroundImage = `url(${data.urls.regular})`
+		document.getElementById("author").textContent = `By: ${data.user.name}`
+    })
 
 ```
 
-```Javascript
+Index.html:
 
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <div class="top">
+                <p>Crypto</p>
+                <p>Weather</p>
+            </div>
+
+            <h1 class="time">TIME HERE</h1>
+
+            <p id="author"></p>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
 
 ```
 
-```Javascript
+Index.css:
 
+```css
+body {
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px #474747;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1.time {
+    text-align: center;
+}
 
 ```
 
