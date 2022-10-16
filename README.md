@@ -1460,7 +1460,7 @@ function determineCardWinner(card1, card2) {
 </details>
 
 <details>
-  <summary>29. Async/Await JS</summary>
+  <summary>**29. Async/Await JS</summary>
 
 Index.js:
 
