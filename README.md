@@ -1571,12 +1571,17 @@ body {
 </details>
 
 <details>
-  <summary>31. Install pygments</summary>
+  <summary>31. Add Author Info</summary>
 
 Index.js:
 
 ```Javascript
-
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
+    .then(res => res.json())
+    .then(data => {
+      document.body.style.backgroundImage = `url(${data.urls.regular})`
+      document.getElementById("author").textContent = `By: ${data.user.name}`
+    })
 
 ```
 
