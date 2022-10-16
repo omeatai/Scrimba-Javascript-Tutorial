@@ -1275,29 +1275,38 @@ button:disabled {
 </details>
 
 <details>
-  <summary>26. Install pygments</summary>
+  <summary>*26. Javascript ClassList</summary>
 
-Index.js:
+```javascript
+-- HTML --
+<div class='container'></div>
 
-```Javascript
-
+-- JAVASCRIPT --
+element.classList.contains('container'); // True or false
+element.classList.add('my-class'); // Adds the class if it isn't present yet
+element.classList.remove('my-class'); // Removes the class if it’s present
+element.classList.toggle('my-class'); // Adds if not present, else removes
 
 ```
 
-```Javascript
-
-
-```
-
-```Javascript
-
-
+```javascript
+classList.item(index); // Returns the item in the list by its index, or undefined if index is greater than or equal to the list's length
+classList.contains(token); // Returns true if the list contains the given token, otherwise false.
+classList.add(token1[, ...tokenN]); // Adds the specified token(s) to the list.
+classList.remove(token1[, ...tokenN]); // Removes the specified token(s) from the list.
+classList.replace(oldToken, newToken); // Replaces token with newToken.
+classList.supports(token); // Returns true if a given token is in the associated attribute's supported tokens.
+classList.toggle(token[, force]); // Removes token from the list if it exists, or adds token to the list if it doesn't. Returns a boolean indicating whether token is in the list after the operation.
+classList.entries(); // Returns an iterator, allowing you to go through all key/value pairs contained in this object.
+classList.forEach(callback[ ,thisArg]); // Executes a provided callback function once per DOMTokenList element.
+classList.keys(); // Returns an iterator, allowing you to go through all keys of the key/value pairs contained in this object.
+classList.values(); // Returns an iterator, allowing you to go through all values of the key/value pairs contained in this object.
 ```
 
 </details>
 
 <details>
-  <summary>27. Install pygments</summary>
+  <summary>27. War - Keep Score</summary>
 
 Index.js:
 
