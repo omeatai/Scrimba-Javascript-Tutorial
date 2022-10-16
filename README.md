@@ -1117,7 +1117,7 @@ div.top > p {
 <details>
   <summary>25. Disable the Draw button</summary>
 
-Index.js:
+Index.html:
 
 ```html
 <html>
