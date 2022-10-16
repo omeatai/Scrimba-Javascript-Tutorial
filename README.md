@@ -1275,7 +1275,7 @@ button:disabled {
 </details>
 
 <details>
-  <summary>*26. Javascript ClassList</summary>
+  <summary>**26. Javascript ClassList</summary>
 
 ```javascript
 -- HTML --
