@@ -1733,22 +1733,51 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 
 
 <details>
-  <summary>35. Install pygments</summary>
+  <summary>35. Check for Error Responses</summary>
 
 Index.js:
 
 ```Javascript
-
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+    .then(res => res.json())
+    .then(data => {
+        throw Error("This is an error")
+        console.log(data)
+    })
+    .catch(err => console.error(err))
 
 ```
 
 ```Javascript
-
-
+https://httpstat.us/200
 ```
 
 ```Javascript
+fetch("https://httpstat.us/404")
+    .then(res => {
+        console.log(res.ok)
+        console.log(res.status)
+        // return res.json()
+    })
+    // .then(data => {
+    //     console.log(data)
+    // })
+    // .catch(err => console.error(err))
+```
 
+```Javascript
+fetch("https://api.coingecko.com/api/v3/coins/dogecoinsdfkhsdlfkjhsldkjfhsdf")
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
 
 ```
 
