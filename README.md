@@ -1820,6 +1820,8 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 
 ```
 
+Index.html:
+
 ```html
 <html>
     <head>
@@ -1843,6 +1845,8 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 </html>
 
 ```
+
+Index.css:
 
 ```css
 * {
