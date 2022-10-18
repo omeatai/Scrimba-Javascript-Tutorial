@@ -2126,7 +2126,7 @@ setInterval(getCurrentTime, 1000)
 
 Index.html:
 
-```Javascript
+```html
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
