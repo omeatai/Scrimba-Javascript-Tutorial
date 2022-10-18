@@ -2229,6 +2229,22 @@ function success(position) {
 
 ```
 
+Current weather data
+
+```markdown
+ccess current weather data for any location on Earth including over 200,000 cities! We collect and process weather data from different sources such as global and local weather models, satellites, radars and a vast network of weather stations. Data is available in JSON, XML, or HTML format.
+```
+
+```Javascript
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+```
+
+```Javascript
+https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}
+
+```
+
 </details>
 
 <details>
