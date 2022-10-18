@@ -2154,7 +2154,7 @@ Index.html:
 
 
 <details>
-  <summary>40. *Geolocation.getCurrentPosition()</summary>
+  <summary>40. Geolocation.getCurrentPosition()</summary>
 
 ```Javascript
 const options = {
