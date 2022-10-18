@@ -2067,6 +2067,12 @@ function getDateTime() {
 
 ```
 
+```Javascript
+const date = new Date()
+console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
+
+```
+
 </details>
 
 
@@ -2074,11 +2080,6 @@ function getDateTime() {
   <summary>39. Install pygments</summary>
 
 Index.js:
-
-```Javascript
-
-
-```
 
 ```Javascript
 
