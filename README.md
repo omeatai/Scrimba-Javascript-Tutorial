@@ -2154,22 +2154,78 @@ Index.html:
 
 
 <details>
-  <summary>40. Install pygments</summary>
-
-Index.js:
+  <summary>40. *Geolocation.getCurrentPosition()</summary>
 
 ```Javascript
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
 
+function success(pos) {
+  const crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+```
+
+```markdown
+Watching the current position
+If the position data changes (either by device movement or if more accurate geo information arrives), you can set up a callback function that is called with that updated position information. This is done using the watchPosition() function, which has the same input parameters as getCurrentPosition(). The callback function is called multiple times, allowing the browser to either update your location as you move, or provide a more accurate location as different techniques are used to geolocate you. The error callback function, which is optional just as it is for getCurrentPosition(), can be called repeatedly.
 
 ```
 
 ```Javascript
+function success(position) {
+  doSomething(position.coords.latitude, position.coords.longitude);
+}
 
+function error() {
+  alert('Sorry, no position available.');
+}
+
+const options = {
+  enableHighAccuracy: true,
+  maximumAge: 30000,
+  timeout: 27000
+};
+
+const watchID = navigator.geolocation.watchPosition(success, error, options);
+
+```
+
+```markdown
+The watchPosition() method returns an ID number that can be used to uniquely identify the requested position watcher; you use this value in tandem with the clearWatch() method to stop watching the user's location.
+```
+
+```Javascript
+navigator.geolocation.clearWatch(watchID);
+
+```
+
+```markdown
+The GeolocationCoordinates instance contains a number of properties, but the two you'll use most commonly are latitude and longitude, which are what you need to draw your position on a map. Hence many Geolocation success callbacks look fairly simple:
 
 ```
 
 ```Javascript
+function success(position) {
+  const latitude  = position.coords.latitude;
+  const longitude = position.coords.longitude;
 
+  // Do something with your latitude and longitude
+}
 
 ```
 
@@ -2179,11 +2235,6 @@ Index.js:
   <summary>41. Install pygments</summary>
 
 Index.js:
-
-```Javascript
-
-
-```
 
 ```Javascript
 
