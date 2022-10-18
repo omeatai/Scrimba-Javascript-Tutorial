@@ -2236,6 +2236,37 @@ https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API k
 
 ```
 
+Index.js:
+
+```Javascript
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  const crd = pos.coords;
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+  fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&units=metric`)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.main)
+        document.getElementById("weather").textContent = `${data.main.temp}°C`
+    })
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+```
+
 </details>
 
 <details>
