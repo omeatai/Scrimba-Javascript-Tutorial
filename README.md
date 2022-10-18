@@ -2077,17 +2077,76 @@ console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
 
 
 <details>
-  <summary>39. Install pygments</summary>
+  <summary>39. Display Time on Page</summary>
 
 Index.js:
 
 ```Javascript
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
+    .then(res => res.json())
+    .then(data => {
+        document.body.style.backgroundImage = `url(${data.urls.regular})`
+		document.getElementById("author").textContent = `By: ${data.user.name}`
+    })
+    .catch(err => {
+        // Use a default background image/author
+        document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
+)`
+		document.getElementById("author").textContent = `By: Dodi Achmad`
+    })
 
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        return res.json()
+    })
+    .then(data => {
+        document.getElementById("crypto-top").innerHTML = `
+            <img src=${data.image.small} />
+            <span>${data.name}</span>
+        `
+        document.getElementById("crypto").innerHTML += `
+            <p>🎯: $${data.market_data.current_price.usd}</p>
+            <p>👆: $${data.market_data.high_24h.usd}</p>
+            <p>👇: $${data.market_data.low_24h.usd}</p>
+        `
+    })
+    .catch(err => console.error(err))
+
+function getCurrentTime() {
+    const date = new Date()
+    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "medium"})
+}
+
+setInterval(getCurrentTime, 1000)
 
 ```
 
-```Javascript
+Index.html:
 
+```Javascript
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <div class="top">
+                <div id="crypto">
+                    <div id="crypto-top"></div>
+                </div>
+                <p>Weather</p>
+            </div>
+
+            <h1 id="time" class="time">TIME HERE</h1>
+
+            <p id="author"></p>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
 
 ```
 
