@@ -2405,6 +2405,31 @@ navigator.geolocation.getCurrentPosition(position => {
 
 ```
 
+Index.html:
+
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <div class="top">
+                <div id="crypto">
+                    <div id="crypto-top"></div>
+                </div>
+                <div id="weather"></div>
+            </div>
+
+            <h1 id="time" class="time">TIME HERE</h1>
+            <p id="author"></p>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+```
+
 </details>
 
 
