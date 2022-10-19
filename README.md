@@ -2639,6 +2639,7 @@ p#author {
 
 </details>
 
+### [5-AIRBNB CLONE](#)
 
 <details>
   <summary>44. Install pygments</summary>
@@ -2802,10 +2803,10 @@ Index.js:
 
 
 
-### [5-AIRBNB CLONE](#)
+### [6-AIRBNB CLONE](#)
 
 <details>
-  <summary>90. Install pygments</summary>
+  <summary>1. Install pygments</summary>
 
 components/Card.js:
 
