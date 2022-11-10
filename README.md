@@ -2071,6 +2071,9 @@ function getDateTime() {
 const date = new Date()
 console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
 
+const date = new Date()
+console.log(date.toLocaleTimeString("en-us"))
+
 ```
 
 </details>
