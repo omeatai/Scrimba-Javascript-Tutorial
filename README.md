@@ -2639,10 +2639,10 @@ p#author {
 
 </details>
 
-### [5-AIRBNB CLONE](#)
+### [5-AIRBNB](#)
 
 <details>
-  <summary>44. Install pygments</summary>
+  <summary>44. sample</summary>
 
 Index.js:
 
@@ -2665,7 +2665,7 @@ Index.js:
 
 
 <details>
-  <summary>45. Install pygments</summary>
+  <summary>45. sample</summary>
 
 Index.js:
 
@@ -2686,143 +2686,3 @@ Index.js:
 
 </details>
 
-
-<details>
-  <summary>46. Install pygments</summary>
-
-Index.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
-
-
-<details>
-  <summary>47. Install pygments</summary>
-
-Index.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
-
-
-<details>
-  <summary>48. Install pygments</summary>
-
-Index.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
-
-
-<details>
-  <summary>49. Install pygments</summary>
-
-Index.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
-
-
-<details>
-  <summary>50. Install pygments</summary>
-
-Index.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
-
-
-
-### [6-AIRBNB CLONE](#)
-
-<details>
-  <summary>1. Install pygments</summary>
-
-components/Card.js:
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-```Javascript
-
-
-```
-
-</details>
