@@ -1,5 +1,5 @@
-# Javascript-Tutorial
-Javascript Tutorial by Ifeanyi Omeata
+# Scrimba-Javascript-Tutorial
+Scrimba-Javascript Tutorial by Ifeanyi Omeata
 
 ## Tutorial
 
