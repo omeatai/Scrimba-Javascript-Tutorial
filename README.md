@@ -1,4 +1,5 @@
 # Scrimba-Javascript-Tutorial
+
 Scrimba-Javascript Tutorial by Ifeanyi Omeata
 
 ## Tutorial
@@ -192,49 +193,50 @@ index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <nav>
-            <h3>BlogSpace</h3>
-        </nav>
-        <div id="blog-list"></div>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <h3>BlogSpace</h3>
+    </nav>
+    <div id="blog-list"></div>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.css:
 
 ```css
 body {
-    font-family: 'Karla', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    background-color: beige;
-    padding: 5px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width: 100%;
+  background-color: beige;
+  padding: 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 nav > h3 {
-    margin: 0;
+  margin: 0;
 }
 
 #blog-list {
-    padding: 30px 10px 10px;
+  padding: 30px 10px 10px;
 }
-
 ```
 
 Index.js:
@@ -266,72 +268,74 @@ index.css:
 
 ```css
 body {
-    font-family: 'Karla', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    background-color: beige;
-    padding: 5px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width: 100%;
+  background-color: beige;
+  padding: 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 nav > h3 {
-    margin: 0;
+  margin: 0;
 }
 
 #blog-list {
-    padding: 10px;
+  padding: 10px;
 }
 
 form {
-    padding: 60px 10px 10px;
-    display: grid;
-    background-color: lightblue;
+  padding: 60px 10px 10px;
+  display: grid;
+  background-color: lightblue;
 }
 
-input#post-title, textarea#post-body {
-    margin-bottom: 10px;
+input#post-title,
+textarea#post-body {
+  margin-bottom: 10px;
 }
 
 button {
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
 }
-
 ```
 
 index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <nav>
-            <h3>BlogSpace</h3>
-        </nav>
-        <form>
-            <label for="post-title">Title:</label>
-            <input id="post-title" type="text" />
-            <label for="post-body">Body:</label>
-            <textarea id="post-body"></textarea>
-            <button>Post</button>
-        </form>
-        <div id="blog-list"></div>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <h3>BlogSpace</h3>
+    </nav>
+    <form>
+      <label for="post-title">Title:</label>
+      <input id="post-title" type="text" />
+      <label for="post-body">Body:</label>
+      <textarea id="post-body"></textarea>
+      <button>Post</button>
+    </form>
+    <div id="blog-list"></div>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.js:
@@ -592,16 +596,15 @@ form.addEventListener("submit", function(e) {
 
 ```markdown
 1. Get a list of all bike racks sold on the site?
-/bikeracks
+   /bikeracks
 
 2. Get a list of all bike racks available in the physical store right now?
    (Assume a query called "available" that is a boolean true/false)
-/bikeracks?available=true  ==> {available: "true"} (Will be parsed as a string)
+   /bikeracks?available=true ==> {available: "true"} (Will be parsed as a string)
 
 3. Get a list of all "Thule"-brand bike racks that can hold 4 bikes?
    (Assume there are "brand" and "numBikes" queries)
-/bikeracks?brand=thule&numBikes=4
-
+   /bikeracks?brand=thule&numBikes=4
 ```
 
 </details>
@@ -827,73 +830,76 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <button id="new-deck">New Deck</button>
-        <div id="cards">
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-        </div>
-        <button id="draw-cards" class="draw">Draw</button>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <button id="new-deck">New Deck</button>
+    <div id="cards">
+      <div class="card-slot"></div>
+      <div class="card-slot"></div>
+    </div>
+    <button id="draw-cards" class="draw">Draw</button>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.css:
 
 ```css
-html, body {
-    margin: 0;
-    padding: 0;
-    background-image: url("img/table.png");
-    font-family: "Exo 2", sans-serif;
-    height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/table.png");
+  font-family: "Exo 2", sans-serif;
+  height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 button {
-    background-color: #FFF100;
-    cursor: pointer;
-    border: none;
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
 }
 
 button#new-deck {
-    align-self: flex-start;
-    padding: 5px;
+  align-self: flex-start;
+  padding: 5px;
 }
 
 button.draw {
-    font-size: 1.2em;
-    padding: 5px;
-    align-self: stretch;
+  font-size: 1.2em;
+  padding: 5px;
+  align-self: stretch;
 }
 
 div.card-slot {
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 120px;
-    width: calc(120px * 5 / 7);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 120px;
+  width: calc(120px * 5 / 7);
 }
 
 div.card-slot:nth-of-type(1) {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 img.card {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 ```
 
@@ -1050,66 +1056,66 @@ function determineCardWinner(card1, card2) {
 Index.css:
 
 ```css
-html, body {
-    margin: 0;
-    padding: 0;
-    background-image: url("img/table.png");
-    font-family: "Exo 2", sans-serif;
-    height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/table.png");
+  font-family: "Exo 2", sans-serif;
+  height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
 
 button {
-    background-color: #FFF100;
-    cursor: pointer;
-    border: none;
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
 }
 
 button#new-deck {
-    align-self: flex-start;
-    padding: 5px;
+  align-self: flex-start;
+  padding: 5px;
 }
 
 button.draw {
-    font-size: 1.2em;
-    padding: 5px;
-    align-self: stretch;
+  font-size: 1.2em;
+  padding: 5px;
+  align-self: stretch;
 }
 
 div.card-slot {
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 120px;
-    width: calc(120px * 5 / 7);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 120px;
+  width: calc(120px * 5 / 7);
 }
 
 div.card-slot:nth-of-type(1) {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 img.card {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 div.top {
-    display: flex;
-    align-items: flex-start;
-    align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 
 div.top > p {
-    margin: 0;
-    margin-left: 10px;
+  margin: 0;
+  margin-left: 10px;
 }
-
 ```
 
 </details>
@@ -1121,26 +1127,28 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="top">
-            <button id="new-deck">New Deck</button>
-            <p id="remaining"></p>
-        </div>
-        <h2 id="header">Game of War</h2>
-        <div id="cards">
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-        </div>
-        <button id="draw-cards" class="draw">Draw</button>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="top">
+      <button id="new-deck">New Deck</button>
+      <p id="remaining"></p>
+    </div>
+    <h2 id="header">Game of War</h2>
+    <div id="cards">
+      <div class="card-slot"></div>
+      <div class="card-slot"></div>
+    </div>
+    <button id="draw-cards" class="draw">Draw</button>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.js:
@@ -1205,71 +1213,71 @@ function determineCardWinner(card1, card2) {
 Index.css:
 
 ```css
-html, body {
-    margin: 0;
-    padding: 0;
-    background-image: url("img/table.png");
-    font-family: "Exo 2", sans-serif;
-    height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/table.png");
+  font-family: "Exo 2", sans-serif;
+  height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
 
 button {
-    background-color: #FFF100;
-    cursor: pointer;
-    border: none;
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
 }
 
 button#new-deck {
-    align-self: flex-start;
-    padding: 5px;
+  align-self: flex-start;
+  padding: 5px;
 }
 
 button.draw {
-    font-size: 1.2em;
-    padding: 5px;
-    align-self: stretch;
+  font-size: 1.2em;
+  padding: 5px;
+  align-self: stretch;
 }
 
 div.card-slot {
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 120px;
-    width: calc(120px * 5 / 7);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 120px;
+  width: calc(120px * 5 / 7);
 }
 
 div.card-slot:nth-of-type(1) {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 img.card {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 div.top {
-    display: flex;
-    align-items: flex-start;
-    align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 
 div.top > p {
-    margin: 0;
-    margin-left: 10px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 button:disabled {
-    cursor: not-allowed;
-    background: #dddddd;
+  cursor: not-allowed;
+  background: #dddddd;
 }
-
 ```
 
 </details>
@@ -1553,19 +1561,19 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 Index.css:
 
 ```css
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
 ```
 
 </details>
@@ -1606,59 +1614,57 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <p>Crypto</p>
-                <p>Weather</p>
-            </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <p>Crypto</p>
+        <p>Weather</p>
+      </div>
 
-            <h1 class="time">TIME HERE</h1>
+      <h1 class="time">TIME HERE</h1>
 
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.css:
 
 ```css
 body {
-    margin: 0;
-    padding: 15px;
-    box-sizing: border-box;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 2px #474747;
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 2px #474747;
 }
 
 main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
+  text-align: center;
 }
-
 ```
 
 </details>
@@ -1703,7 +1709,6 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
 </details>
 
-
 <details>
   <summary>34. Get Dogecoin Data</summary>
 
@@ -1730,7 +1735,6 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 ```
 
 </details>
-
 
 <details>
   <summary>35. Check for Error Responses</summary>
@@ -1783,7 +1787,6 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoinsdfkhsdlfkjhsldkjfhsdf")
 
 </details>
 
-
 <details>
   <summary>36. Display Name and Icon</summary>
 
@@ -1824,81 +1827,78 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <p>Weather</p>
-            </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div id="crypto">
+          <div id="crypto-top"></div>
+        </div>
+        <p>Weather</p>
+      </div>
 
-            <h1 class="time">TIME HERE</h1>
+      <h1 class="time">TIME HERE</h1>
 
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.css:
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #242424;
+  margin: 0;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 20px #242424;
 }
 
 main {
-    padding: 15px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
+  text-align: center;
 }
 
 div#crypto {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 div#crypto-top {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 div#crypto-top > span {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-
 ```
 
 </details>
-
 
 <details>
   <summary>37. Get Crypto Prices</summary>
@@ -1945,86 +1945,83 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <p>Weather</p>
-            </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div id="crypto">
+          <div id="crypto-top"></div>
+        </div>
+        <p>Weather</p>
+      </div>
 
-            <h1 class="time">TIME HERE</h1>
+      <h1 class="time">TIME HERE</h1>
 
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.css:
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #242424;
+  margin: 0;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 20px #242424;
 }
 
 main {
-    padding: 15px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
+  text-align: center;
 }
 
 div#crypto {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 div#crypto > p {
-    margin: 0;
+  margin: 0;
 }
 
 div#crypto-top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 div#crypto-top > span {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-
 ```
 
 </details>
-
 
 <details>
   <summary>38. Full Digital Clock</summary>
@@ -2078,7 +2075,6 @@ console.log(date.toLocaleTimeString("en-us"))
 
 </details>
 
-
 <details>
   <summary>39. Display Time on Page</summary>
 
@@ -2131,30 +2127,28 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <p>Weather</p>
-            </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div id="crypto">
+          <div id="crypto-top"></div>
+        </div>
+        <p>Weather</p>
+      </div>
 
-            <h1 id="time" class="time">TIME HERE</h1>
+      <h1 id="time" class="time">TIME HERE</h1>
 
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 </details>
-
 
 <details>
   <summary>40. Geolocation.getCurrentPosition()</summary>
@@ -2206,7 +2200,6 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 ```
 
 The watchPosition() method returns an ID number that can be used to uniquely identify the requested position watcher; you use this value in tandem with the clearWatch() method to stop watching the user's location.
-
 
 ```Javascript
 navigator.geolocation.clearWatch(watchID);
@@ -2412,29 +2405,27 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <div id="weather"></div>
-            </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div id="crypto">
+          <div id="crypto-top"></div>
+        </div>
+        <div id="weather"></div>
+      </div>
 
-            <h1 id="time" class="time">TIME HERE</h1>
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <h1 id="time" class="time">TIME HERE</h1>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 </details>
-
 
 <details>
   <summary>43. Create Chrome Extension</summary>
@@ -2464,27 +2455,26 @@ Index.html:
 
 ```html
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="index.css">
-        <title>Personal Dashboard</title>
-    </head>
-    <body>
-        <main>
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <div id="weather"></div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Personal Dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div id="crypto">
+          <div id="crypto-top"></div>
+        </div>
+        <div id="weather"></div>
+      </div>
 
-            <h1 id="time" class="time"></h1>
-            <p id="author"></p>
-        </main>
-        <script src="index.js"></script>
-    </body>
+      <h1 id="time" class="time"></h1>
+      <p id="author"></p>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
-
 ```
 
 Index.js:
@@ -2556,88 +2546,87 @@ Index.css:
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #242424;
+  margin: 0;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 20px #242424;
 }
 
 main {
-    padding: 15px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
-    font-size: 5rem;
+  text-align: center;
+  font-size: 5rem;
 }
 
 div#crypto {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 div#crypto > p {
-    margin: 0;
+  margin: 0;
 }
 
 div#crypto-top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 div#crypto-top > span {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 div#weather {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-self: flex-start;
-    margin-top: -20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-self: flex-start;
+  margin-top: -20px;
 }
 
 div#weather > img {
-    width: 70px;
+  width: 70px;
 }
 
 p.weather-city {
-    width: 100%;
-    text-align: right;
-    margin: 0;
-    margin-top: -10px;
-    font-size: 1.2rem;
+  width: 100%;
+  text-align: right;
+  margin: 0;
+  margin-top: -10px;
+  font-size: 1.2rem;
 }
 
 p.weather-temp {
-    margin: 0;
-    font-size: 1.7rem;
-    margin-left: -10px;
+  margin: 0;
+  font-size: 1.7rem;
+  margin-left: -10px;
 }
 
 p#author {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-
 ```
 
 </details>
@@ -2666,14 +2655,13 @@ Index.js:
 
 </details>
 
-
 <details>
   <summary>45. sample</summary>
 
 Index.js:
 
 ```Javascript
-
+sample
 
 ```
 
@@ -2688,4 +2676,3 @@ Index.js:
 ```
 
 </details>
-
