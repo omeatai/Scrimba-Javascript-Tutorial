@@ -2661,8 +2661,7 @@ Index.js:
 Index.js:
 
 ```Javascript
-sample
-ff
+
 ```
 
 ```Javascript
